@@ -2,78 +2,89 @@
   Header
 ============= */
 header {
-    font-family: 'bebas-neue', sans-serif;
-    font-size: rem-calc(20);
-    font-weight: 700;
-    background-color: $white;
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 600;
-     >div {
-        display: grid;
-        grid-template-areas: "logo burger"
-            "nav nav";
-        grid-template-columns: 80% auto;
+   font-family: 'bebas-neue', sans-serif;
+   font-size: rem-calc(20);
+   font-weight: 700;
+   background-color: $white;
+   left: 0;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   z-index: 600;
+
+   >div {
+      display: grid;
+      grid-template-areas: "logo burger"
+         "nav nav";
+      grid-template-columns: 80% auto;
+
+      @include lg {
+         grid-template-areas: "logo nav";
+         grid-template-columns: 20% auto;
+      }
+
+      #logo-container {
+         grid-area: logo;
+         padding: 5px;
+
+         .logo {
+            width: 35%;
+
+            @include md {
+               width: 25%;
+            }
+
+            @include lg {
+               width: 80%;
+            }
+         }
+      }
+
+      #burger-container {
+         align-items: center;
+         display: flex;
+         grid-area: burger;
+         justify-content: flex-end;
+         padding: 20px;
+
          @include lg {
-            grid-template-areas: "logo nav";
-            grid-template-columns: 20% auto;
-        }
-         #logo-container {
-            grid-area: logo;
-            padding: 5px;
-             .logo {
-                width: 35%;
-                 @include md {
-                    width: 25%;
-                }
-                 @include lg {
-                    width: 80%;
-                }
-            }
-        }
-         #burger-container {
-            align-items: center;
-            display: flex;
-            grid-area: burger;
-            justify-content: flex-end;
-            padding: 20px;
-             @include lg {
-                display: none !important;
-            }
-             i {
-                cursor: pointer;
-            }
-  
+            display: none !important;
          }
-         #nav-container {
-            background-color: $blue;
-            display: none;
-            grid-area: nav;
-            padding: 0px;
-             @include lg {
-                background-color: $white;
-                display: block !important;
-            }
-             ul {
-                text-align: center;
-                 li {
-                    padding: 20px;
-                    margin: 3px;
-                    background-color: $text-grey;
-                    border-style: solid;
-                    border-width: 2px;
-                    border-color: $grey;
-                     @include lg {
-                        background-color: $white;
-                        border-style: none;
-                    }
-                }
-             }
+
+         i {
+            cursor: pointer;
          }
-    }
- }
- 
- 
- 
+
+      }
+
+      #nav-container {
+         background-color: $blue;
+         display: none;
+         grid-area: nav;
+         padding: 0px;
+
+         @include lg {
+            background-color: $white;
+            display: block !important;
+         }
+
+         ul {
+            text-align: center;
+
+            li {
+               padding: 20px;
+               margin: 3px;
+               background-color: $text-grey;
+               border-style: solid;
+               border-width: 2px;
+               border-color: $grey;
+
+               @include lg {
+                  background-color: $white;
+                  border-style: none;
+               }
+            }
+         }
+      }
+   }
+}

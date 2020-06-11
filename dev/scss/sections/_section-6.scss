@@ -2,50 +2,49 @@
   Section 6
 ============= */
 #section-6 {
-  @include xl{
-      grid-template-columns: auto 1200px auto;
+  @include xl {
+    grid-template-columns: auto 1200px auto;
   }
-  
+
   aside {
-      img {
-          width: 100%;
-          margin-bottom: 10%;
-      }
+    img {
+      width: 100%;
+      margin-bottom: 10%;
+    }
   }
-  
+
   hr {
     border-width: 0px;
     height: 21px;
     background-color: $red;
     margin-bottom: 10px;
-  
+
     @include md {
       height: 18px;
-  }
-  
-  @include lg {
+    }
+
+    @include lg {
       height: 25px;
+    }
+
   }
-  
-  }
-  
+
   h1 {
-      text-align: center;
-      font-size: rem-calc(36);
-  
-      @include md {
-                  
-        font-size: rem-calc(48);
-       
+    text-align: center;
+    font-size: rem-calc(36);
+
+    @include md {
+
+      font-size: rem-calc(48);
+
     }
-     @include lg {
-       
-        font-size: rem-calc(60)
-       
+
+    @include lg {
+
+      font-size: rem-calc(60)
     }
-  
+
   }
-  
-  
- }
- 
+
+
+}
