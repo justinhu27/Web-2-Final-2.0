@@ -1,0 +1,264 @@
+/* =============
+  Section-4
+============= */
+#section-4 {
+    color: $black;
+    display: grid;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700px;
+    grid-template-areas: ". section-4 .";
+    grid-template-columns: 15px auto 15px;
+    text-align: center;
+     @include md {
+       
+    }
+     @include lg {
+        grid-template-columns: 18% auto 18%;
+        margin-top: 100px;
+    }
+  
+    @include xl {
+        grid-template-columns: auto 1200px auto;
+    }
+  
+    hr {
+        border-width: 0px;
+        height: 21px;
+        background-color: $blue;
+        margin-bottom: 10px;
+        margin-top: 164px;
+  
+        @include md {
+          height: 18px;
+          margin-top: 200px;
+      }
+  
+      @include lg {
+          height: 25px;
+          margin-top: 98px;
+      }
+     
+      }
+     >div {
+        grid-area: section-4;
+        //padding: 40px 0;
+         @include md {
+            margin: 0 10%;
+            //padding: 60px 0;
+            width: 80%;
+        }
+         #section-4-title {
+            //margin-top: 100px;
+             h1 {
+                font-size: rem-calc(35);
+                 @include lg {
+                    font-size: rem-calc(45);
+                }
+            }
+        }
+         #section-4-card {
+             ul {
+                display: grid;
+                gap: 40px;
+                grid-template-rows: repeat (4, 1fr);
+                grid-template-columns: 1;
+                grid-template-areas:
+                    "card1"
+                    "card2"
+                    "card3"
+                    "card4";
+  
+                    @include md {
+                        grid-template-rows: repeat(2, 1fr);
+                        grid-template-columns: 2;
+                        grid-template-areas:
+                        "card1"
+                        "card2"
+                        "card3"
+                        "card4";
+                          
+                        justify-items: center;
+                        gap: 30px;
+                    }
+            
+                    @include lg {
+                        display: grid;
+                        grid-template-columns: repeat(2, 2fr);
+                        grid-template-areas:
+                            "card1 card2"
+                            "card3 card4";
+                    }
+                 li {
+  
+                    background-color: $grey;
+                   
+                    @include md {
+                        display: grid;
+                        //grid-template-columns: 30% auto;
+                        grid-template-areas:
+                            "div section"
+                            "div section"
+                            "div section"
+                            "div section";
+                    }
+                     @include lg {
+                        display: grid;
+                        //grid-template-columns: 10% auto;
+                        grid-template-areas:
+                            "div section"
+                            "div section"
+                            "div section"
+                            "div section";
+                    }
+                     div {
+                        background-size: cover;
+                        background-position: center;
+                       
+                    }
+                     h2 {
+                        font-size: rem-calc(24);
+                        font-family: bebas-neue, sans-serif;
+                        color: $text-grey;
+                      
+                    }
+                     p {
+                        font-size: rem-calc(14);
+                        line-height: rem-calc(17);
+                        text-align: justify;
+                        margin: 10px;
+                         @include md {
+                            //margin: 20px;
+                            line-height: rem-calc(17);
+                        }
+  
+                        @include lg {
+                            text-align: justify;
+                            font-size: rem-calc(10);
+                            line-height: rem-calc(12);
+                        }
+                    }
+                }
+                 #card1 {
+                    grid-area: card1;
+                     >div {
+                        background-image: url("../img/section-4/Exotic1.png");
+                        height: 249px;
+                        width: 100%;
+                         @include md {
+                            height: 249px;
+                            width: 278px;
+                           
+                        }
+                         @include lg {
+                            height: 172px;
+                            width: 191px;
+                           
+                           
+                        }
+                    }
+                }
+                 #card2 {
+                    grid-area: card2;
+                     div {
+                        background-image: url("../img/section-4/Super1.png");
+                        height: 249px;
+                        width: 100%;
+                         @include md {
+                            height: 249px;
+                            width: 278px;
+                        }
+                         @include lg {
+                            height: 172px;
+                            width: 191px;
+                           
+                           
+                        }
+                    }
+                }
+                 #card3 {
+                    grid-area: card3;
+                     div {
+                        background-image: url("../img/section-4/Hollywood1.png");
+                        height: 249px;
+                        width: 100%;
+                         @include md {
+                            height: 249px;
+                            width: 278px;
+                        }
+                         @include lg {
+                            height: 172px;
+                            width: 191px;
+                           
+                           
+                        }
+                    }
+                }
+  
+                #card4 {
+                    grid-area: card4;
+                     div {
+                        background-image: url("../img/section-4/Classic1.png");
+                        height: 249px;
+                        width: 100%;
+                         @include md {
+                            height: 249px;
+                            width: 278px;
+                        }
+                         @include lg {
+                            height: 172px;
+                            width: 191px;
+                           
+                           
+                        }
+                    }
+                }
+   
+          
+            }
+        }
+         #section-4-bottom {
+            display: flex;
+            justify-content: center;
+            //padding-top: 10px;
+             @include md {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-areas:
+                    ". h3 .";
+                //gap: 60px;
+            }
+             h3 {
+                align-items: center;
+                font-family: bebas-neue, sans-serif;
+                background-color: $light-blue;
+                display: flex;
+                font-size: rem-calc(16);
+                height: 69px;
+                justify-content: center;
+                width: 190px;
+                 @include md {
+                    font-size: rem-calc(20);
+                    grid-area: h3;
+                    height: 69px;
+                    width: 190px;
+                }
+                 @include lg {
+                    font-size: rem-calc(18);
+                    height: 48px;
+                    width: 131px;
+                }
+                 a:link,
+                a:visited {
+                    color: $black;
+                    transition: 0.25s;
+                    text-decoration: none;
+                }
+                 a:hover,
+                a:active {
+                    color: $white;
+                }
+            }
+        }
+    }
+ }
+ 

@@ -1,0 +1,26 @@
+/* =============
+ Footer
+============= */
+footer {
+    color: $white;
+    text-align: center;
+    padding: 18px;
+    background-color: $red;
+  
+    @include md {
+        padding: 23px;
+    }
+     @include lg {
+        padding: 32px;
+    }
+     #footer-content {
+         h5 {
+            font-size: rem-calc(12);
+         
+        }
+       
+    }
+ }
+ 
+ 
+ 

@@ -1,0 +1,76 @@
+/* =============
+  Section 5
+============= */
+#section-5 {
+    @include xl{
+        grid-template-columns: auto 1200px auto;
+    }
+    
+    aside {
+        img {
+            width: 100%;
+        }
+    }
+    
+    hr {
+      border-width: 0px;
+      height: 21px;
+      background-color: $blue;
+      margin-bottom: 10px;
+    
+      @include md {
+        height: 18px;
+    }
+    
+    @include lg {
+        height: 25px;
+    }
+    
+    }
+    
+    
+    h1 {
+        text-align: center;
+        font-size: rem-calc(36);
+    
+        @include md {
+                    
+          font-size: rem-calc(48);
+         
+      }
+       @include lg {
+         
+          font-size: rem-calc(60)
+         
+      }
+    
+    }
+    
+    h2 {
+        text-align: center;
+        font-size: rem-calc(30)
+      
+    
+    }
+    
+    #section-5-container {
+        display: grid;
+        grid-template-columns: 20px auto 20px;
+        grid-template-areas: ". section-5 .";
+    
+        @include md {
+            grid-template-columns: 50px auto 50px;
+        }
+    
+        @include lg {
+            grid-template-columns: 100px auto 100px;
+        }
+    
+        #section-5-content {
+            grid-area: section-5;
+        }
+    }
+   }
+   
+
+ 

@@ -1,0 +1,108 @@
+/* =============
+  Section 2
+============= */
+#section-2 {
+    @include xl{
+        grid-template-columns: auto 1200px auto;
+    }
+     @include lg {
+        display: grid;
+        grid-template-areas: ". section-2-lock .";
+    }
+     hr {
+        border-width: 0px;
+        height: 21px;
+        background-color: $green;
+        margin-bottom: 10px;
+   
+        @include md {
+          height: 18px;
+      }
+   
+      @include lg {
+          height: 25px;
+      }
+      
+      }
+     
+    #section-2-lock {
+         @include md {
+            display: grid;
+            grid-template-columns: 50% auto;
+        }
+         @include lg {
+            grid-area: section-2-lock;
+            display: grid;
+            grid-template-columns: 50% auto;
+        }
+  
+        aside {
+            background-image: url("../img/section-2/Display2.png");
+            background-size: cover;
+            background-position: center;
+            height: 414px;
+            width: 375px;
+             @include md {
+               
+                height: 502px;
+                width: 390px;
+                margin-top: 28px;
+                margin-bottom: 70px;
+            }
+             @include lg {
+                height: 502px;
+                width: 453px;
+                margin-top: 30px;
+                margin-bottom: 80px;
+               
+            }
+  
+            @include lg {
+                height: 660px;
+            }
+         }
+         #section-2-container {
+            display: grid;
+            grid-template-columns: 10px auto 10px;
+            grid-template-areas: ". section-2 .";
+  
+            #section-2-content {
+                grid-area: section-2;
+            }
+  
+            h1 {
+                text-align: center;
+                @include md {
+                   text-align: left;
+               }
+     
+                font-size: rem-calc(36);
+                color: $black;
+                 @include md {
+                    font-size: rem-calc(48);
+                }
+            }
+  
+            h2 {
+                text-align: left;
+                font-size: rem-calc(14);
+                line-height: rem-calc(30);
+                color: $black;
+              
+                @include md {
+                  
+                    font-size: rem-calc(22);
+                    line-height: rem-calc(30);
+                }
+                 @include lg {
+                   
+                    font-size: rem-calc(26);
+                    line-height: rem-calc(34);
+                    padding-left: 17px;
+                }
+            }    
+    
+         }
+    }
+ }
+ 

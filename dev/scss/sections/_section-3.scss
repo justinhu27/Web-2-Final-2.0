@@ -1,0 +1,269 @@
+/* =============
+  Section-3
+============= */
+#section-3 {
+    hr {
+        border-width: 0px;
+        height: 21px;
+        background-color: $green;
+        margin-bottom: 10px;
+   
+        @include md {
+          height: 18px;
+      }
+   
+      @include lg {
+          height: 25px;
+      }
+      
+      }
+  
+    @include xl {
+        display: grid;
+        grid-template-columns: auto 1200px auto;
+        grid-template-areas: ". section-3 .";
+    }
+     display: grid;
+    grid-template-columns: 15px auto 15px;
+    grid-template-areas: ". section-3 .";
+     @include md {
+       
+    }
+     background-image: url("../img/section-3/Side.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 777px;
+     @include md {
+        height: 459px;
+       
+    }
+     @include lg {
+        height: 460px;
+    }
+   
+    #section-3-container {
+        grid-area: section-3;
+        position: relative;
+        z-index: 500;
+  
+        @include md {
+            display: grid;
+            grid-template-columns: 50% auto;
+            grid-template-areas:
+                "when price";
+            gap: 50px;
+        }
+         .color-overlay {
+            width: 100%;
+            height: 100%;
+            background: $black;
+            opacity: 40%;
+            position: absolute;
+     
+            @include md {
+                height: 459px;
+            }
+     
+            @include lg {
+                height: 460px;
+            }
+     
+  
+   
+     
+        }
+    
+    
+         #section-3-when {
+            text-align: center;
+            margin: 20px;
+  
+            h1 {
+                font-size: rem-calc(31);
+                color: $white;
+                 @include md {
+                    font-size: rem-calc(42);
+                }
+            }
+             h3 {
+                font-size: rem-calc(14);
+                color: $white;
+                line-height: rem-calc(40);
+                font-weight: 400;
+                 @include md {
+                    font-size: rem-calc(16);
+                    line-height: rem-calc(50);
+                     span {
+                        font-weight: 700;
+                       
+                    }
+                }
+                 @include lg {
+                    font-size: rem-calc(18);
+                    line-height: rem-calc(50);
+                }
+            }
+             @include md {
+                grid-area: when;
+                margin: 0;
+               
+            }
+        }
+         #section-3-price {
+            text-align: center;
+             @include md {
+               
+                grid-area: price;
+                margin-left: -40px;
+            }
+             h1 {
+                font-size: rem-calc(31);
+                color: $white;
+                 @include md {
+                    font-size: rem-calc(42);
+                }
+            }
+             h3 {
+                font-size: rem-calc(14);
+                color: $white;
+                line-height: rem-calc(33);
+                font-weight: 400;
+                 span {
+                    font-weight: 700;
+                }
+                 @include md {
+                    font-size: rem-calc(16);
+                    line-height: rem-calc(37);
+                }
+                 @include lg {
+                    font-size: rem-calc(18);
+                    line-height: rem-calc(37);
+                }
+            }
+  
+        }
+  
+    }
+  
+    #section-3-bottom-1 {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 100px;
+      
+       
+       @include md {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+                "h3 h3";
+       
+            padding-left: 120px;
+        }
+  
+        @include md {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+                "h3 h3";
+           
+            padding-left: 120px;
+        }
+  
+        @include lg {
+            padding-left: 250px;
+        }
+  
+        h3 {
+            align-items: center;
+            font-family: bebas-neue, sans-serif;
+            background-color: $dark-grey;
+            display: flex;
+            font-size: rem-calc(16);
+            height: 48px;
+            justify-content: center;
+            width: 111px;
+           
+  
+            @include md {
+                font-size: rem-calc(20);
+                grid-area: h3;
+                height: 48px;
+                width: 111px;
+            }
+  
+            @include lg {
+                font-size: rem-calc(18);
+                height: 48px;
+                width: 111px;
+            }
+  
+            a:link,
+            a:visited {
+                color: $white;
+                transition: 0.25s;
+                text-decoration: none;
+            }
+  
+            a:hover,
+            a:active {
+                color: $white;
+            }
+        }
+    }
+    #section-3-bottom-2 {
+        display: flex;
+        justify-content: center;
+        //padding-top: 10px;
+        margin-bottom: 100px;
+  
+        @include md {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+                "h3 h3";
+            //gap: 60px;
+            padding-left: 50px;
+  
+            @include lg {
+                padding-left: 150px;
+            }
+        }
+  
+        h3 {
+            align-items: center;
+            font-family: bebas-neue, sans-serif;
+            background-color: $dark-grey;
+            display: flex;
+            font-size: rem-calc(16);
+            height: 48px;
+            justify-content: center;
+            width: 200px;
+  
+            @include md {
+                font-size: rem-calc(20);
+                grid-area: h3;
+                height: 48px;
+                width: 200px;
+            }
+  
+            @include lg {
+                font-size: rem-calc(18);
+                height: 48px;
+                width: 200px;
+            }
+  
+            a:link,
+            a:visited {
+                color: $white;
+                transition: 0.25s;
+                text-decoration: none;
+            }
+  
+            a:hover,
+            a:active {
+                color: $white;
+            }
+        }
+    }
+ }
+ 
